@@ -33,10 +33,6 @@ label {
     font-size: 2rem;
 }
 
-label:hover .title {
-    background-color: #eff5bc;
-}
-
 .title {
     padding: 1% 2%;
     background: #a8b9df;
@@ -46,22 +42,18 @@ label:hover .title {
     transition: ease .3s;
 }
 
+.container:active .title {
+    background-color: #eff5bc;
+}
+
 .arrow {
-    opacity: 0;
+    opacity: 1;
     height: 3rem;
     width: 3rem;
     transition: .3s ease-out;
 }
 
-main:hover .arrow {
-    opacity: 1;
-}
-
 input:checked+label .arrow {
-    transform: rotate(180deg);
-}
-
-input:hover+label .arrow {
     transform: rotate(180deg);
 }
 
@@ -73,12 +65,6 @@ input:hover+label .arrow {
 }
 
 input:checked+label .content {
-    display: block;
-    height: 30vh;
-    padding: 2%;
-}
-
-input:hover+label .content {
     display: block;
     height: 30vh;
     padding: 2%;
@@ -102,6 +88,28 @@ input:hover+label .content {
 
     label {
         cursor: pointer;
+    }
+
+    .arrow {
+        opacity: 0;
+    }
+
+    label:hover .title {
+        background-color: #eff5bc;
+    }
+
+    main:hover .arrow {
+        opacity: 1;
+    }
+
+    input:hover+label .arrow {
+        transform: rotate(180deg);
+    }
+
+    input:hover+label .content {
+        display: block;
+        height: 30vh;
+        padding: 2%;
     }
 }
 
